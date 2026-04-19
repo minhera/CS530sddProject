@@ -58,7 +58,7 @@ unordered_map<string, OptabInfo> construct_optab(){
     optab["SUBF"] = {0x5C, F3_4};
     optab["SUBR"] = {0x94, F2};
     optab["SVC"] = {0xB0, F2};
-    optab["TD"] = {0xE0, F2};
+    optab["TD"] = {0xE0, F3_4};
     optab["TIO"] = {0xF8, F1};
     optab["TIX"] = {0x2C, F3_4};
     optab["TIXR"] = {0xB8, F2};
