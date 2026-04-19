@@ -11,7 +11,7 @@ CXX = g++
 CXXFLAGS = -std=c++11 -g3 -Wall
 
 EXEC = lxe
-OBJS = main.o limited_assembler.o symtab.o littab.o
+OBJS = main.o limited_assembler.o symtab.o littab.o optab.o
 
 $(EXEC) : $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(EXEC) $(OBJS)
@@ -28,7 +28,8 @@ symtab.o: symtab.cpp symtab.h
 littab.o: littab.cpp littab.h
 	$(CXX) $(CXXFLAGS) -c littab.cpp
 
-
+optab.o: optab.cpp optab.h
+	$(CXX) $(CXXFLAGS) -c optab.cpp
 
 clean:
 	rm -f *.o $(EXEC)
