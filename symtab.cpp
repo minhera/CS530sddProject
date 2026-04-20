@@ -1,47 +1,67 @@
 #include "symtab.h"
+#include <fstream>
+#include <iostream>
+#include <iomanip>
 
-bool SymbolTable::insert_symbol(const string &symbol, int locctr, bool CS = false){
-    // Return false if the passed symbol is *
-    if (symbol == "*"){
+using namespace std;
+
+SymbolTable::SymbolTable() : programLength(0) {}
+
+bool SymbolTable::insert_symbol(const string& symbol, int locctr, bool CS) {
+    if (symTab.count(symbol)) {
         return false;
     }
 
-    // Check if symbol exists in the table
-    if (symTab.count(symbol)){
-        return false;
-    }
-
-    // If exist, update/insert the values to symbol storing map just in case
     symTab[symbol] = SymtabInfo(locctr, CS);
     symOrder.push_back(symbol);
-
     return true;
 }
 
-bool SymbolTable::lookup_symbol(const string &name, SymtabInfo& symtab){
-    auto it = symTab.find(name);
-
-    // If symbol is not found, return false
-    if (it == symTab.end()){
+bool SymbolTable::lookup_symbol(const string& symbol, SymtabInfo& info) const {
+    auto it = symTab.find(symbol);
+    if (it == symTab.end()) {
         return false;
     }
 
-    // If symbol is found, copy the Symbol Table Information to passed argument
-    symtab = it->second;
-
+    info = it->second;
     return true;
 }
 
-void SymbolTable::set_length(const string &name, int length){
-    // Update Control Section's length for printing if exists
-    auto it = symTab.find(name);
-
-    if (it != symTab.end()){
-        it->second.length = length;
-    }
+void SymbolTable::set_length(int len) {
+    programLength = len;
 }
 
+void SymbolTable::write_symtab(const string& filename, const string& CSName) const {
+    ofstream out(filename);
 
-void SymbolTable::write_symtab(const string &filename, const string &CSName){
+    if (!out) {
+        cerr << "Error: could not open symtab output file " << filename << endl;
+        return;
+    }
 
+    out << "Csect   Symbol  Value   LENGTH  Flags:\n";
+    out << "--------------------------------------\n";
+
+    // Print control section line
+    out << left << setw(8) << CSName
+        << setw(8) << ""
+        << right << uppercase << hex << setw(6) << setfill('0') << 0
+        << "  "
+        << setw(6) << setfill('0') << programLength
+        << setfill(' ') << "\n";
+
+    // Print symbols in insertion order, skipping the control section symbol itself
+    for (const string& symbol : symOrder) {
+        if (symbol == CSName) continue;
+
+        auto it = symTab.find(symbol);
+        if (it == symTab.end()) continue;
+
+        out << left << setw(8) << ""
+            << setw(8) << symbol
+            << right << uppercase << hex << setw(6) << setfill('0') << it->second.address
+            << setfill(' ') << "          "
+            << "R"
+            << "\n";
+    }
 }
