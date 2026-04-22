@@ -80,19 +80,16 @@ Output files similar to textbook format
 
 ## Known Deficiencies / Bugs
 
-* Error handling is limited; the assembler may continue after encountering errors
-* Some formatting differences may exist compared to the exact textbook output
-* Does not generate full object program files (only listing and symbol table)
-* Assumes valid SIC/XE syntax in most cases
-* Limited support for complex expressions
+There are some error handling but limited  
+Assumes valid SIC/XE syntax in most cases  
+Fixed formatting so the program is unable to output different format  
+Only listing and symbol table so no full object program files  
 
 ## Lessons Learned
 
-* Understanding the importance of **two-pass assembly** and why symbol resolution requires it
-* Gained experience implementing **low-level instruction encoding**
-* Learned how **addressing modes (PC/base-relative)** affect object code generation
-* Improved debugging skills for **linker and parsing errors**
-* Learned the importance of **clean code organization and modular design**
-* Better understanding of how assemblers bridge human-readable code and machine instructions
+Understanding the importance of two-pass assembly and why symbol resolution requires it  
+Learned how addressing modes (PC/base-relative) affect object code generation  
+Improved debugging skills and error handling  
+Learned the importance of clean and organized code
 
----
+
