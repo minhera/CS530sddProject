@@ -29,39 +29,28 @@ README → This file
 ## Compile Instructions
 
 On edoras / Linux:  
-make
+make  
 
+## Operating Instructions  
 
-
-
-## Operating Instructions
-
-Run the assembler using:
-
-```bash
-./lxe file1.sic file2.sic
-```
-
-Example:
-
-```bash
-./lxe P2sample.sic
-```
+Run the assembler using:  
+./lxe file.sic  
+Example:  
+./lxe P2sample.sic  
 
 If no input files are provided, the program will display an error message and terminate.
 
-### Input
+## Input
 
-* One or more `.sic` files containing SIC/XE assembly code
+.sic files containing SIC/XE assembly code
 
-### Output
+## Output
 
-For each input file `example.sic`, the program generates:
+For each input file file.sic, the program generates:  
 
-* `example.l` → Listing file
-* `example.st` → Symbol table file
+file.l → Listing file  
+file.st → Symbol table file  
 
----
 
 ## Design Decisions
 
