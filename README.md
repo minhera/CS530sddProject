@@ -14,17 +14,17 @@ Assignment: Project #2 – SIC/XE Limited Assembler
 
 ## File Manifest
 
-main.cpp → Program entry point, handles command-line arguments
-limited_assembler.cpp → Contains Pass 1 and Pass 2 logic
-limited_assembler.h → Assembler class definition
-optab.cpp → Opcode table implementation
-optab.h → Opcode table definitions
-symtab.cpp → Symbol table implementation
-symtab.h → Symbol table definitions
-littab.cpp → Literal table implementation
-littab.h → Literal table definitions
-Makefile → Used to compile the project
-README → This file
+main.cpp → Program entry point, handles command-line arguments  
+limited_assembler.cpp → Contains Pass 1 and Pass 2 logic  
+limited_assembler.h → Assembler class definition  
+optab.cpp → Opcode table implementation  
+optab.h → Opcode table definitions  
+symtab.cpp → Symbol table implementation  
+symtab.h → Symbol table definitions  
+littab.cpp → Literal table implementation  
+littab.h → Literal table definitions  
+Makefile → Used to compile the project  
+README → This file  
 
 ## Compile Instructions
 
