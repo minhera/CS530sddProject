@@ -34,12 +34,13 @@ void SymbolTable::set_length(int len) {
 void SymbolTable::write_symtab(const string& filename, const string& CSName) const {
     ofstream out(filename);
 
-    if (!out) {
+    // Try opening the files
+    if (!out.is_open()) {
         cerr << "Error: could not open symtab output file " << filename << endl;
         return;
     }
 
-    out << "Csect   Symbol  Value   LENGTH  Flags:\n";
+    out << "CSect   Symbol  Value   LENGTH  Flags:\n";
     out << "--------------------------------------\n";
 
     // Print control section line

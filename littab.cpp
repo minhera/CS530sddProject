@@ -47,7 +47,7 @@ static int literal_length(const string& lit) {
         return (lit.size() - 4) / 2;
     }
 
-    return 0;
+    return 0;   
 }
 
 // Add literal if not already present
