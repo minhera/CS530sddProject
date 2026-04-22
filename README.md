@@ -55,23 +55,23 @@ file.st → Symbol table file
 ## Design Decisions
 
 Two-pass assembler design:  
-Pass 1 builds the symbol table and assigns addresses.  
-Pass 2 generates object code using the symbol table.  
+Pass 1 builds the symbol table and assigns addresses  
+Pass 2 generates object code using the symbol table  
   
 optab handles opcode information  
 symtab handles symbol storage and lookup  
 littab manages literals and delayed assignment  
+  
+Literal handling via LITTAB
+Literals are stored during Pass 1 and assigned addresses at LTORG or END
+  
+Stringstream for formatting  
+Used to generate properly formatted hexadecimal object code.  
+  
+Use of vectors for ordering  
+A vector is used to preserve insertion order of symbols for correct output formatting.  
 
-* **Literal handling via LITTAB**
-  Literals are stored during Pass 1 and assigned addresses at `LTORG` or `END`.
 
-* **Use of vectors for ordering**
-  A vector is used to preserve insertion order of symbols for correct output formatting.
-
-* **Stringstream for formatting**
-  Used to generate properly formatted hexadecimal object code.
-
----
 
 ## Extra Features
 
