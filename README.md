@@ -54,15 +54,13 @@ file.st → Symbol table file
 
 ## Design Decisions
 
-* **Two-pass assembler design**
-  Pass 1 builds the symbol table and assigns addresses.
-  Pass 2 generates object code using the symbol table.
-
-* **Separation of concerns**
-
-  * `optab` handles opcode information
-  * `symtab` handles symbol storage and lookup
-  * `littab` manages literals and delayed assignment
+Two-pass assembler design:  
+Pass 1 builds the symbol table and assigns addresses.  
+Pass 2 generates object code using the symbol table.  
+  
+optab handles opcode information  
+symtab handles symbol storage and lookup  
+littab manages literals and delayed assignment  
 
 * **Literal handling via LITTAB**
   Literals are stored during Pass 1 and assigned addresses at `LTORG` or `END`.
@@ -86,7 +84,6 @@ file.st → Symbol table file
   * `=X'...'`
 * Output formatting similar to textbook examples
 
----
 
 ## Known Deficiencies / Bugs
 
@@ -95,8 +92,6 @@ file.st → Symbol table file
 * Does not generate full object program files (only listing and symbol table)
 * Assumes valid SIC/XE syntax in most cases
 * Limited support for complex expressions
-
----
 
 ## Lessons Learned
 
