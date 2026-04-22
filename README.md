@@ -75,8 +75,7 @@ Support for format 1, 2, 3, and 4 instructions
 Support for immediate (#), indirect (@), and indexed (,X) addressing  
 Implementation of PC-relative and base-relative addressing  
 Literal table with handling of:  
-=C'...'  
-=X'...'  
+=C'...' and =X'...'  
 Output files similar to textbook format
 
 
