@@ -1,9 +1,9 @@
 # README
 
 Name: Minh Tran  
-Class Account Username: cssc2552
-Name: 
-Class Account Username:
+Class Account Username: cssc2552  
+Name:  
+Class Account Username:  
 
 Class Information: CS 530, Spring 2026
 
