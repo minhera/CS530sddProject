@@ -74,8 +74,7 @@ A vector is used to preserve insertion order of symbols for correct output forma
 Support for format 1, 2, 3, and 4 instructions  
 Support for immediate (#), indirect (@), and indexed (,X) addressing  
 Implementation of PC-relative and base-relative addressing  
-Literal table with handling of:  
-=C'...' and =X'...'  
+Literal table with handling of =C'...' and =X'...'  
 Output files similar to textbook format
 
 
