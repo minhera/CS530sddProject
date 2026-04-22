@@ -1,0 +1,8 @@
+WRONG  START   0
+FIRST   LDA     #10
+        STA     VALUE
+VALUE   WORD    5
+VALUE   RESW    1
+        LDA     MISSING
+        RSUB
+        END     FIRST
