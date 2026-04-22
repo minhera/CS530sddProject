@@ -2,8 +2,8 @@
 
 Name: Minh Tran  
 Class Account Username: cssc2552  
-Name:  
-Class Account Username:  
+Name: Brian Madott
+Class Account Username: cssc2537
 
 Class Information: CS 530, Spring 2026  
 
@@ -28,12 +28,17 @@ README → This file
 
 ## Compile Instructions
 
-On edoras / Linux:  
-make  
+On edoras / Linux (Read Makefile for device specification such as C++ 11):  
+Make sure to have all files downloaded under the same folder.
+On terminal:
+1. type "make clean" without double quotations to clean everything
+2. type "make" without double quotations to build the program
 
 ## Operating Instructions  
 
 Run the assembler using:  
+type "./lxe file_name.sic" without double quotations and change file_name to test files provided or extracted from somewhere else.
+
 ./lxe file.sic  
 Example:  
 ./lxe P2sample.sic  
