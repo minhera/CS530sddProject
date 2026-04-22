@@ -14,38 +14,25 @@ Assignment: Project #2 – SIC/XE Limited Assembler
 
 ## File Manifest
 
-* `main.cpp` → Program entry point, handles command-line arguments
-* `limited_assembler.cpp` → Contains Pass 1 and Pass 2 logic
-* `limited_assembler.h` → Assembler class definition
-* `optab.cpp` → Opcode table implementation
-* `optab.h` → Opcode table definitions
-* `symtab.cpp` → Symbol table implementation
-* `symtab.h` → Symbol table definitions
-* `littab.cpp` → Literal table implementation
-* `littab.h` → Literal table definitions
-* `Makefile` → Used to compile the project
-* `README` → This file
-* `*.sic` → Test input files
-* `*.l` → Listing output files (generated)
-* `*.st` → Symbol table output files (generated)
-
----
+main.cpp → Program entry point, handles command-line arguments
+limited_assembler.cpp → Contains Pass 1 and Pass 2 logic
+limited_assembler.h → Assembler class definition
+optab.cpp → Opcode table implementation
+optab.h → Opcode table definitions
+symtab.cpp → Symbol table implementation
+symtab.h → Symbol table definitions
+littab.cpp → Literal table implementation
+littab.h → Literal table definitions
+Makefile → Used to compile the project
+README → This file
 
 ## Compile Instructions
 
-### On edoras / Linux:
-
-```bash
+On edoras / Linux:  
 make
-```
 
-### On Windows (PowerShell):
 
-```bash
-g++ main.cpp limited_assembler.cpp optab.cpp symtab.cpp littab.cpp -o lxe
-```
 
----
 
 ## Operating Instructions
 
