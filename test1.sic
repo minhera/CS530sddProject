@@ -1,6 +1,6 @@
 TEST    START   1000
 FIRST   LDX     #0
-        LDA     #5
+        LDA     #67
         STA     COUNT
         +JSUB   SUBRTN
         LDB     #TABLE
@@ -20,7 +20,7 @@ DONE    LDA     @COUNT
         NOBASE
         RSUB
 
-COUNT   WORD    3
+COUNT   WORD    67
 LIMIT   WORD    20
 MAX     WORD    4
 ONE     WORD    1
