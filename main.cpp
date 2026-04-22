@@ -11,7 +11,8 @@ int main(int argc, char* argv[]){
 
     // Iterate through the passed arguemtns (excluding the first becauase thats the program)
     for (int i = 1; i < argc; i++){
-        LimitedAssembler assembler;
+        string filename = argv[i];
+        LimitedAssembler assembler = LimitedAssembler(filename);
         assembler.assemble(argv[i]);  
     }
 
