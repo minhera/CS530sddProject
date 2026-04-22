@@ -17,12 +17,16 @@ LOOP    ADD     TABLE,X
 DONE    LDA     @COUNT
         SUB     ONE
         STA     COUNT
+        LDA     MIN
+        ADD     #420
+        STA     RESULT
         NOBASE
         RSUB
 
 COUNT   WORD    67
 LIMIT   WORD    20
 MAX     WORD    4
+MIN     WORD    1
 ONE     WORD    1
 TOTAL   RESW    1
 BUFFER  RESB    10
