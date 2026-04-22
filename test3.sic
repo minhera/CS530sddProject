@@ -1,0 +1,33 @@
+ALPHA   START   2000
+BEGIN   LDX     #0
+        LDA     #25
+        STA     NUM1
+        LDB     #ARRAY
+        BASE    ARRAY
+AGAIN   ADD     ARRAY,X
+        COMP    TOP
+        JEQ     FINISH
+        TIX     LIMIT
+        JLT     AGAIN
+        +STA    STORE
+        LDA     =C'HI'
+        STA     TEMP
+        LTORG
+FINISH  LDA     LOW
+        ADD     NUM1
+        STA     ANSWER
+        NOBASE
+        RSUB
+
+NUM1    WORD    7
+TOP     WORD    100
+LIMIT   WORD    3
+LOW     WORD    2
+STORE   RESW    1
+TEMP    RESB    6
+ARRAY   WORD    11
+        WORD    22
+        WORD    33
+
+ANSWER  RESW    1
+        END     BEGIN
