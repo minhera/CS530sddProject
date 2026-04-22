@@ -62,27 +62,22 @@ optab handles opcode information
 symtab handles symbol storage and lookup  
 littab manages literals and delayed assignment  
   
-Literal handling via LITTAB
 Literals are stored during Pass 1 and assigned addresses at LTORG or END
   
-Stringstream for formatting  
-Used to generate properly formatted hexadecimal object code.  
+Stringstream for Used to generate properly formatted hexadecimal object code.  
   
-Use of vectors for ordering  
 A vector is used to preserve insertion order of symbols for correct output formatting.  
-
 
 
 ## Extra Features
 
-* Support for **format 1, 2, 3, and 4 instructions**
-* Handling of **immediate (#), indirect (@), and indexed (,X) addressing**
-* Implementation of **PC-relative and base-relative addressing**
-* Literal table with proper handling of:
-
-  * `=C'...'`
-  * `=X'...'`
-* Output formatting similar to textbook examples
+Support for format 1, 2, 3, and 4 instructions  
+Support for immediate (#), indirect (@), and indexed (,X) addressing  
+Implementation of PC-relative and base-relative addressing  
+Literal table with handling of:  
+=C'...'  
+=X'...'  
+Output files similar to textbook format
 
 
 ## Known Deficiencies / Bugs
