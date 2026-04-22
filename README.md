@@ -5,22 +5,14 @@ Class Account Username: cssc2552
 Name:  
 Class Account Username:  
 
-Class Information: CS 530, Spring 2026
+Class Information: CS 530, Spring 2026  
 
 ## Assignment Information
 
-* Assignment: Project #2 – SIC/XE Limited Assembler
-* Program Name: lxe
+Assignment: Project #2 – SIC/XE Limited Assembler
 
-## File Name
-
-* README
-
----
 
 ## File Manifest
-
-The following files are included in this project:
 
 * `main.cpp` → Program entry point, handles command-line arguments
 * `limited_assembler.cpp` → Contains Pass 1 and Pass 2 logic
@@ -33,7 +25,6 @@ The following files are included in this project:
 * `littab.h` → Literal table definitions
 * `Makefile` → Used to compile the project
 * `README` → This file
-* `SDD` → Software Design Document
 * `*.sic` → Test input files
 * `*.l` → Listing output files (generated)
 * `*.st` → Symbol table output files (generated)
