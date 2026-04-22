@@ -1,10 +1,12 @@
 ############################
 # Makefile for Assignment 2
-# Student 1 Name:
-# Student 1 RED ID:
-# Student 2 Name: 
-# Student 2 RED ID:
-#
+# Student 1 Name: Brian Madott
+# Student 1 Class Account Username: cssc2537
+# Student 2 Name: Minh Tran
+# Student 2 Class Account Username: cssc2552
+# Class: CS 530, Spring 2026
+# Assignment: Assignment #2 - Final SDD and Full Package
+# File Name: Makefile
 ############################
 
 CXX = g++

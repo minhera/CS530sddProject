@@ -1,3 +1,13 @@
+/**
+ * Student 1 Name: Brian Madott
+ * Student 1 Class account username: cssc2537
+ * Student 2 Name: Minh Tran
+ * Student 2 Class account username: cssc2552
+ * Class: CS 530, Spring 2026
+ * Assignment: Assignment #2 - Final SDD and Full Package
+ * File Name: optab.cpp
+ */
+
 #include "optab.h"
 
 unordered_map<string, OptabInfo> construct_optab(){
