@@ -1,0 +1,39 @@
+TEST    START   1000
+FIRST   LDX     #0
+        LDA     #5
+        STA     COUNT
+        +JSUB   SUBRTN
+        LDB     #TABLE
+        BASE    TABLE
+LOOP    ADD     TABLE,X
+        COMP    LIMIT
+        JEQ     DONE
+        TIX     MAX
+        JLT     LOOP
+        +STA    TOTAL
+        LDA     =C'XYZ'
+        STA     BUFFER
+        LTORG
+DONE    LDA     @COUNT
+        SUB     ONE
+        STA     COUNT
+        NOBASE
+        RSUB
+
+COUNT   WORD    3
+LIMIT   WORD    20
+MAX     WORD    4
+ONE     WORD    1
+TOTAL   RESW    1
+BUFFER  RESB    10
+TABLE   WORD    2
+        WORD    4
+        WORD    6
+        WORD    8
+
+SUBRTN  LDA     #9
+        STA     RESULT
+        RSUB
+
+RESULT  RESW    1
+        END     FIRST
