@@ -2,7 +2,7 @@
 
 Name: Minh Tran  
 Class Account Username: cssc2552  
-Name: Brian Madott
+Name: Brian Madott  
 Class Account Username: cssc2537
 
 Class Information: CS 530, Spring 2026  
@@ -10,6 +10,8 @@ Class Information: CS 530, Spring 2026
 ## Assignment Information
 
 Assignment: Project #2 – SIC/XE Limited Assembler
+
+File Name: README.md
 
 
 ## File Manifest
